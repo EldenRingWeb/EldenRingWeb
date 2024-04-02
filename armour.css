@@ -1,0 +1,166 @@
+/* Background and layout */
+body {
+    background-image: url('https://i.postimg.cc/yBqzG71C/nklxvnaorl671-2.jpg?dl=1');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.row {
+    background: rgb(0, 0, 0, 0.5);
+    color: #ffaa49;
+    border-radius: 0px 0px 10px 10px;
+    text-align: left;
+    margin: auto;
+    width: 80%;
+    padding-top: 5%;
+}
+
+/* Navbar */
+ul {
+    list-style-type: none;
+    margin-bottom: 0%;
+    padding: 0px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 1);
+    width: 100%;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: #ffaa49;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.right {
+    float: right;
+    padding: 14px 16px;
+}
+
+.left {
+    font-size: 30px;
+}
+
+span a {
+    text-decoration: none;
+    color: #ffaa49;
+    text-align: center;
+    margin-left: 5%;
+}
+
+span a:hover {
+    color: #ffaa49;
+}
+
+.p {
+    color: #fff;
+}
+
+/* Dropdown */
+.dropbtn {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    width: 73%;
+    border: none;
+}
+
+.dropdown {
+    width: 73%;
+    margin-left: 21%;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 71%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height:200px;
+    overflow-y: scroll; 
+}
+
+.dropdown-content a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.dropown-content a:hover {
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.divdrop:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown button */
+button {
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0);
+    border-style: none;
+    color: #ffaa49;
+}
+
+/* Armour image */
+.img {
+    height: 75%;
+    width: 30%;
+    margin-left: 23%;
+    position: absolute;
+    z-index: 0;
+    transform: scaleX(-1);
+}
+
+/* Plus dropdown signs */
+.imginput {
+    width: 3%;
+    z-index: 1;
+}
+
+#imginput1 {
+    margin-left: 34%;
+    margin-top: 4%;
+    transform: scaleX(-1);
+}
+
+#imginput2 {
+    margin-left: 34%;
+    margin-top: 10%;
+}
+
+#imginput3 {
+    margin-left: 34%;
+    margin-top: 12%;
+}
+
+#imginput4 {
+    margin-left: 34%;
+    margin-top: 10%;
+}
+
+#myInput {
+    margin-bottom: 10.5px;
+    width: 100%;
+    border-radius: 25px;
+    border-color: #ffaa49;
+}

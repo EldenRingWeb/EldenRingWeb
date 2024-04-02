@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="https://i.redd.it/0gp7pfwvwrk81.png">
+    <link rel="stylesheet" href="armour.css">
+</head>
+
+<body>
+    <ul>
+        <span class="left"><a href="index.html">Elden Ring Build Calculator</a></span>
+        <li class="right"><a href="armour.html">Armour Comparison</a></li>
+        <li class="right"><a href="map.html">Elden Ring Map</a></li>
+        <li class="right"><a href="advanced.html">Advanced Calculator</a></li>
+        <li class="right"><a href="basic.html">Basic Calculator</a></li>
+    </ul>
+
+    <div class="row">
+        <img class="img" src="https://p325k7wa.twic.pics/high/elden-ring/elden-ring/05-characters/elden-ring-character-wretch-full.png">
+        <div class="divdrop dropdown">
+            <input id="imginput1" class="imginput" type="image" src="https://www.unizambeze.ac.mz/wp-content/uploads/2016/07/plus-4-xxl.png">
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Helm.." id="myInput" onkeyup="filterFunction()">
+                <button class="butt" onclick="headArmour('Alberich%27s%20Pointed%20Hat')">Alberich's Pointed Hat</button>
+                <button class="butt" onclick="headArmour('Alberich%27s%20Pointed%20Hat%20\(Altered\)')">Alberich's Pointed Hat (Altered)</button>
+                <button class="butt" onclick="headArmour('Albinauric%20Mask')">Albinauric Mask</button>
+                <button class="butt" onclick="headArmour('All-Knowing%20Helm')">All-Knowing Helm</button>
+                <button class="butt" onclick="headArmour('Aristocrat%20Hat')">Aristocrat Hat</button>
+                <button class="butt" onclick="headArmour('Aristocrat%20Headband')">Aristocrat Headband</button>
+                <button class="butt" onclick="headArmour('Ash-of-War%20Scarab')">Ash-of-War Scarab</button>
+                <button class="butt" onclick="headArmour('Astrologer%20Hood')">Astrologer Hood</button>
+                <button class="butt" onclick="headArmour('Azur%27s%20Glintstone%20Crown')">Azur's Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Bandit%20Mask')">Bandit Mask</button>
+                <button class="butt" onclick="headArmour('Banished%20Knight%20Helm')">Banished Knight Helm</button>
+                <button class="butt" onclick="headArmour('Banished%20Knight%20Helm%20\(Altered\)')">Banished Knight Helm (Altered)</button>
+                <button class="butt" onclick="headArmour('Beast%20Champion%20Helm')">Beast Champion Helm</button>
+                <button class="butt" onclick="headArmour('Black%20Dumpling')">Black Dumpling</button>
+                <button class="butt" onclick="headArmour('Black%20Hood')">Black Hood</button>
+                <button class="butt" onclick="headArmour('Black%20Knife%20Hood')">Black Knife Hood</button>
+                <button class="butt" onclick="headArmour('Black%20Wolf%20Mask')">Black Wolf Mask</button>
+                <button class="butt" onclick="headArmour('Blackflame%20Monk%20Hood')">Blackflame Monk Hood</button>
+                <button class="butt" onclick="headArmour('Blackguard%27s%20Iron%20Mask')">Blackguard's Iron Mask</button>
+                <button class="butt" onclick="headArmour('Bloodhound%20Knight%20Helm')">Bloodhound Knight Helm</button>
+                <button class="butt" onclick="headArmour('Bloodsoaked%20Mask')">Bloodsoaked Mask</button>
+                <button class="butt" onclick="headArmour('Blue%20Cloth%20Cowl')">Blue Cloth Cowl</button>
+                <button class="butt" onclick="headArmour('Blue%20Festive%20Hood')">Blue Festive Hood</button>
+                <button class="butt" onclick="headArmour('Blue%20Silver%20Mail%20Hood')">Blue Silver Mail Hood</button>
+                <button class="butt" onclick="headArmour('Brave%27s%20Cord%20Circlet')">Brave's Cord Circlet</button>
+                <button class="butt" onclick="headArmour('Brave%27s%20Leather%20Helm')">Brave's Leather Helm</button>
+                <button class="butt" onclick="headArmour('Briar%20Helm')">Briar Helm</button>
+                <button class="butt" onclick="headArmour('Bull-Goat%20Helm')">Bull-Goat Helm</button>
+                <button class="butt" onclick="headArmour('Carian%20Knight%20Helm')">Carian Knight Helm</button>
+                <button class="butt" onclick="headArmour('Cerulean%20Tear%20Scarab')">Cerulean Tear Scarab</button>
+                <button class="butt" onclick="headArmour('Chain%20Coif')">Chain Coif</button>
+                <button class="butt" onclick="headArmour('Champion%20Headband')">Champion Headband</button>
+                <button class="butt" onclick="headArmour('Cleanrot%20Helm')">Cleanrot Helm</button>
+                <button class="butt" onclick="headArmour('Cleanrot%20Helm%20\(Altered\)')">Cleanrot Helm (Altered)</button>
+                <button class="butt" onclick="headArmour('Commoner%27s%20Headband')">Commoner's Headband</button>
+                <button class="butt" onclick="headArmour('Commoner%27s%20Headband%20\(Altered\)')">Commoner's Headband (Altered)</button>
+                <button class="butt" onclick="headArmour('Confessor%20Hood')">Confessor Hood</button>
+                <button class="butt" onclick="headArmour('Confessor%20Hood%20\(Altered\)')">Confessor Hood (Altered)</button>
+                <button class="butt" onclick="headArmour('Consort%27s%20Mask')">Consort's Mask</button>
+                <button class="butt" onclick="headArmour('Crimson%20Hood')">Crimson Hood</button>
+                <button class="butt" onclick="headArmour('Crimson%20Tear%20Scarab')">Crimson Tear Scarab</button>
+                <button class="butt" onclick="headArmour('Crucible%20Axe%20Helm')">Crucible Axe Helm</button>
+                <button class="butt" onclick="headArmour('Crucible%20Tree%20Helm')">Crucible Tree Helm</button>
+                <button class="butt" onclick="headArmour('Cuckoo%20Knight%20Helm')">Cuckoo Knight Helm</button>
+                <button class="butt" onclick="headArmour('Depraved%20Perfumer%20Headscarf')">Depraved Perfumer Headscarf</button>
+                <button class="butt" onclick="headArmour('Diallos%27s%20Mask')">Diallos's Mask</button>
+                <button class="butt" onclick="headArmour('Drake%20Knight%20Helm')">Drake Knight Helm</button>
+                <button class="butt" onclick="headArmour('Drake%20Knight%20Helm%20\(Altered\)')">Drake Knight Helm (Altered)</button>
+                <button class="butt" onclick="headArmour('Duelist%20Helm')">Duelist Helm</button>
+                <button class="butt" onclick="headArmour('Eccentric%27s%20Hood')">Eccentric's Hood</button>
+                <button class="butt" onclick="headArmour('Eccentric%27s%20Hood%20\(Altered\)')">Eccentric's Hood (Altered)</button>
+                <button class="butt" onclick="headArmour('Elden%20Lord%20Crown')">Elden Lord Crown</button>
+                <button class="butt" onclick="headArmour('Envoy%20Crown')">Envoy Crown</button>
+                <button class="butt" onclick="headArmour('Exile%20Hood')">Exile Hood</button>
+                <button class="butt" onclick="headArmour('Festive%20Hood')">Festive Hood</button>
+                <button class="butt" onclick="headArmour('Festive%20Hood%20\(Altered\)')">Festive Hood (Altered)</button>
+                <button class="butt" onclick="headArmour('Fia%27s%20Hood')">Fia's Hood</button>
+                <button class="butt" onclick="headArmour('Finger%20Maiden%20Fillet')">Finger Maiden Fillet</button>
+                <button class="butt" onclick="headArmour('Fingerprint%20Helm')">Fingerprint Helm</button>
+                <button class="butt" onclick="headArmour('Fire%20Monk%20Hood')">Fire Monk Hood</button>
+                <button class="butt" onclick="headArmour('Fire%20Prelate%20Helm')">Fire Prelate Helm</button>
+                <button class="butt" onclick="headArmour('Foot%20Soldier%20Cap')">Foot Soldier Cap</button>
+                <button class="butt" onclick="headArmour('Foot%20Soldier%20Helm')">Foot Soldier Helm</button>
+                <button class="butt" onclick="headArmour('Foot%20Soldier%20Helmet')">Foot Soldier Helmet</button>
+                <button class="butt" onclick="headArmour('Gelmir%20Knight%20Helm')">Gelmir Knight Helm</button>
+                <button class="butt" onclick="headArmour('Gilded%20Foot%20Soldier%20Cap')">Gilded Foot Soldier Cap</button>
+                <button class="butt" onclick="headArmour('Glintstone%20Scarab')">Glintstone Scarab</button>
+                <button class="butt" onclick="headArmour('Godrick%20Knight%20Helm')">Godrick Knight Helm</button>
+                <button class="butt" onclick="headArmour('Godrick%20Soldier%20Helm')">Godrick Soldier Helm</button>
+                <button class="butt" onclick="headArmour('Godskin%20Apostle%20Hood')">Godskin Apostle Hood</button>
+                <button class="butt" onclick="headArmour('Godskin%20Noble%20Hood')">Godskin Noble Hood</button>
+                <button class="butt" onclick="headArmour('Grass%20Hair%20Ornament')">Grass Hair Ornament</button>
+                <button class="butt" onclick="headArmour('Great%20Horned%20Headband')">Great Horned Headband</button>
+                <button class="butt" onclick="headArmour('Greathelm')">Greathelm</button>
+                <button class="butt" onclick="headArmour('Greathood')">Greathood</button>
+                <button class="butt" onclick="headArmour('Guardian%20Mask')">Guardian Mask</button>
+                <button class="butt" onclick="headArmour('Guilty%20Hood')">Guilty Hood</button>
+                <button class="butt" onclick="headArmour('Haima%20Glintstone%20Crown')">Haima Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Haligtree%20Helm')">Haligtree Helm</button>
+                <button class="butt" onclick="headArmour('Haligtree%20Knight%20Helm')">Haligtree Knight Helm</button>
+                <button class="butt" onclick="headArmour('Hierodas%20Glintstone%20Crown')">Hierodas Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('High%20Page%20Hood')">High Page Hood</button>
+                <button class="butt" onclick="headArmour('Highwayman%20Hood')">Highwayman Hood</button>
+                <button class="butt" onclick="headArmour('Hoslow%27s%20Helm')">Hoslow's Helm</button>
+                <button class="butt" onclick="headArmour('Iji%27s%20Mirrorhelm')">Iji's Mirrorhelm</button>
+                <button class="butt" onclick="headArmour('Imp%20Head%20\(Cat\)')">Imp Head (Cat)</button>
+                <button class="butt" onclick="headArmour('Imp%20Head%20\(Corpse\)')">Imp Head (Corpse)</button>
+                <button class="butt" onclick="headArmour('Imp%20Head%20\(Elder\)')">Imp Head (Elder)</button>
+                <button class="butt" onclick="headArmour('Imp%20Head%20\(Fanged\)')">Imp Head (Fanged)</button>
+                <button class="butt" onclick="headArmour('Imp%20Head%20\(Long-Tongued\)')">Imp Head (Long-Tongued)</button>
+                <button class="butt" onclick="headArmour('Imp%20Head%20\(Wolf\)')">Imp Head (Wolf)</button>
+                <button class="butt" onclick="headArmour('Incantation%20Scarab')">Incantation Scarab</button>
+                <button class="butt" onclick="headArmour('Iron%20Helmet')">Iron Helmet</button>
+                <button class="butt" onclick="headArmour('Iron%20Kasa')">Iron Kasa</button>
+                <button class="butt" onclick="headArmour('Jar')">Jar</button>
+                <button class="butt" onclick="headArmour('Juvenile%20Scholar%20Cap')">Juvenile Scholar Cap</button>
+                <button class="butt" onclick="headArmour('Kaiden%20Helm')">Kaiden Helm</button>
+                <button class="butt" onclick="headArmour('Karolos%20Glintstone%20Crown')">Karolos Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Knight%20Helm')">Knight Helm</button>
+                <button class="butt" onclick="headArmour('Land%20of%20Reeds%20Helm')">Land of Reeds Helm</button>
+                <button class="butt" onclick="headArmour('Lazuli%20Glintstone%20Crown')">Lazuli Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Leyndell%20Knight%20Helm')">Leyndell Knight Helm</button>
+                <button class="butt" onclick="headArmour('Leyndell%20Soldier%20Helm')">Leyndell Soldier Helm</button>
+                <button class="butt" onclick="headArmour('Lionel%27s%20Helm')">Lionel's Helm</button>
+                <button class="butt" onclick="headArmour('Lusat%27s%20Glintstone%20Crown')">Lusat's Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Malenia%27s%20Winged%20Helm')">Malenia's Winged Helm</button>
+                <button class="butt" onclick="headArmour('Malformed%20Dragon%20Helm')">Malformed Dragon Helm</button>
+                <button class="butt" onclick="headArmour('Maliketh%27s%20Helm')">Maliketh's Helm</button>
+                <button class="butt" onclick="headArmour('Marais%20Mask')">Marais Mask</button>
+                <button class="butt" onclick="headArmour('Marionette%20Soldier%20Birdhelm')">Marionette Soldier Birdhelm</button>
+                <button class="butt" onclick="headArmour('Marionette%20Soldier%20Helm')">Marionette Soldier Helm</button>
+                <button class="butt" onclick="headArmour('Mask%20of%20Confidence')">Mask of Confidence</button>
+                <button class="butt" onclick="headArmour('Mushroom%20Crown')">Mushroom Crown</button>
+                <button class="butt" onclick="headArmour('Mushroom%20Head')">Mushroom Head</button>
+                <button class="butt" onclick="headArmour('Navy%20Hood')">Navy Hood</button>
+                <button class="butt" onclick="headArmour('Night%20Maiden%20Twin%20Crown')">Night Maiden Twin Crown</button>
+                <button class="butt" onclick="headArmour('Night%27s%20Cavalry%20Helm')">Night's Cavalry Helm</button>
+                <button class="butt" onclick="headArmour('Night%27s%20Cavalry%20Helm%20\(Altered\)')">Night's Cavalry Helm (Altered)</button>
+                <button class="butt" onclick="headArmour('Nomadic%20Merchant%27s%20Chapeau')">Nomadic Merchant's Chapeau</button>
+                <button class="butt" onclick="headArmour('Nox%20Mirrorhelm')">Nox Mirrorhelm</button>
+                <button class="butt" onclick="headArmour('Nox%20Monk%20Hood')">Nox Monk Hood</button>
+                <button class="butt" onclick="headArmour('Nox%20Monk%20Hood%20\(Altered\)')">Nox Monk Hood (Altered)</button>
+                <button class="butt" onclick="headArmour('Nox%20Swordstress%20Crown')">Nox Swordstress Crown</button>
+                <button class="butt" onclick="headArmour('Nox%20Swordstress%20Crown%20\(Altered\)')">Nox Swordstress Crown (Altered)</button>
+                <button class="butt" onclick="headArmour('Octopus%20Head')">Octopus Head</button>
+                <button class="butt" onclick="headArmour('Okina%20Mask')">Okina Mask</button>
+                <button class="butt" onclick="headArmour('Old%20Aristocrat%20Cowl')">Old Aristocrat Cowl</button>
+                <button class="butt" onclick="headArmour('Olivinus%20Glintstone%20Crown')">Olivinus Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Omen%20Helm')">Omen Helm</button>
+                <button class="butt" onclick="headArmour('Omensmirk%20Mask')">Omensmirk Mask</button>
+                <button class="butt" onclick="headArmour('Page%20Hood')">Page Hood</button>
+                <button class="butt" onclick="headArmour('Perfumer%20Hood')">Perfumer Hood</button>
+                <button class="butt" onclick="headArmour('Preceptor%27s%20Big%20Hat')">Preceptor's Big Hat</button>
+                <button class="butt" onclick="headArmour('Prisoner%20Iron%20Mask')">Prisoner Iron Mask</button>
+                <button class="butt" onclick="headArmour('Prophet%20Blindfold')">Prophet Blindfold</button>
+                <button class="butt" onclick="headArmour('Pumpkin%20Helm')">Pumpkin Helm</button>
+                <button class="butt" onclick="headArmour('Queen%27s%20Crescent%20Crown')">Queen's Crescent Crown</button>
+                <button class="butt" onclick="headArmour('Radahn%20Soldier%20Helm')">Radahn Soldier Helm</button>
+                <button class="butt" onclick="headArmour('Radahn%27s%20Redmane%20Helm')">Radahn's Redmane Helm</button>
+                <button class="butt" onclick="headArmour('Radiant%20Gold%20Mask')">Radiant Gold Mask</button>
+                <button class="butt" onclick="headArmour('Ragged%20Hat')">Ragged Hat</button>
+                <button class="butt" onclick="headArmour('Ragged%20Hat%20\(Altered\)')">Ragged Hat (Altered)</button>
+                <button class="butt" onclick="headArmour('Raging%20Wolf%20Helm')">Raging Wolf Helm</button>
+                <button class="butt" onclick="headArmour('Raya%20Lucarian%20Helm')">Raya Lucarian Helm</button>
+                <button class="butt" onclick="headArmour('Redmane%20Knight%20Helm')">Redmane Knight Helm</button>
+                <button class="butt" onclick="headArmour('Rotten%20Duelist%20Helm')">Rotten Duelist Helm</button>
+                <button class="butt" onclick="headArmour('Royal%20Knight%20Helm')">Royal Knight Helm</button>
+                <button class="butt" onclick="headArmour('Royal%20Remains%20Helm')">Royal Remains Helm</button>
+                <button class="butt" onclick="headArmour('Ruler%27s%20Mask')">Ruler's Mask</button>
+                <button class="butt" onclick="headArmour('Sacred%20Crown%20Helm')">Sacred Crown Helm</button>
+                <button class="butt" onclick="headArmour('Sage%20Hood')">Sage Hood</button>
+                <button class="butt" onclick="headArmour('Sanguine%20Noble%20Hood')">Sanguine Noble Hood</button>
+                <button class="butt" onclick="headArmour('Scaled%20Helm')">Scaled Helm</button>
+                <button class="butt" onclick="headArmour('Shining%20Horned%20Headband')">Shining Horned Headband</button>
+                <button class="butt" onclick="headArmour('Silver%20Tear%20Mask')">Silver Tear Mask</button>
+                <button class="butt" onclick="headArmour('Skeletal%20Mask')">Skeletal Mask</button>
+                <button class="butt" onclick="headArmour('Snow%20Witch%20Hat')">Snow Witch Hat</button>
+                <button class="butt" onclick="headArmour('Spellblade%27s%20Pointed%20Hat')">Spellblade's Pointed Hat</button>
+                <button class="butt" onclick="headArmour('Traveler%27s%20Hat')">Traveler's Hat</button>
+                <button class="butt" onclick="headArmour('Traveling%20Maiden%20Hood')">Traveling Maiden Hood</button>
+                <button class="butt" onclick="headArmour('Tree%20Sentinel%20Helm')">Tree Sentinel Helm</button>
+                <button class="butt" onclick="headArmour('Twinned%20Helm')">Twinned Helm</button>
+                <button class="butt" onclick="headArmour('Twinsage%20Glintstone%20Crown')">Twinsage Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Vagabond%20Knight%20Helm')">Vagabond Knight Helm</button>
+                <button class="butt" onclick="headArmour('Veteran%27s%20Helm')">Veteran's Helm</button>
+                <button class="butt" onclick="headArmour('Vulgar%20Militia%20Helm')">Vulgar Militia Helm</button>
+                <button class="butt" onclick="headArmour('White%20Mask')">White Mask</button>
+                <button class="butt" onclick="headArmour('Witch%27s%20Glintstone%20Crown')">Witch's Glintstone Crown</button>
+                <button class="butt" onclick="headArmour('Zamor%20Mask')">Zamor Mask</button>
+            </div>
+        </div>
+        <div class="divdrop dropdown">
+            <input id="imginput2" class="imginput" type="image" src="https://www.unizambeze.ac.mz/wp-content/uploads/2016/07/plus-4-xxl.png">
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Chest Armor.." id="myInput" onkeyup="filterFunction()">
+                <button class="butt" onclick="chestArmour()">Alberich's Robe</button>
+                <button class="butt" onclick="chestArmour()">Alberich's Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">All-Knowing Armor</button>
+                <button class="butt" onclick="chestArmour()">All-Knowing Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Aristocrat Coat</button>
+                <button class="butt" onclick="chestArmour()">Aristocrat Garb</button>
+                <button class="butt" onclick="chestArmour()">Aristocrat Garb (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Astrologer Robe</button>
+                <button class="butt" onclick="chestArmour()">Astrologer Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Azur's Glintstone Robe</button>
+                <button class="butt" onclick="chestArmour()">Bandit Garb</button>
+                <button class="butt" onclick="chestArmour()">Banished Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Banished Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Battlemage Robe</button>
+                <button class="butt" onclick="chestArmour()">Beast Champion Armor</button>
+                <button class="butt" onclick="chestArmour()">Beast Champion Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Black Knife Armor</button>
+                <button class="butt" onclick="chestArmour()">Black Knife Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Blackflame Monk Armor</button>
+                <button class="butt" onclick="chestArmour()">Blaidd's Armor</button>
+                <button class="butt" onclick="chestArmour()">Blaidd's Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Bloodhound Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Bloodhound Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Bloodsoaked Tabard</button>
+                <button class="butt" onclick="chestArmour()">Blue Cloth Vest</button>
+                <button class="butt" onclick="chestArmour()">Blue Festive Garb</button>
+                <button class="butt" onclick="chestArmour()">Blue Silver Mail Armor</button>
+                <button class="butt" onclick="chestArmour()">Blue Silver Mail Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Brave's Battlewear</button>
+                <button class="butt" onclick="chestArmour()">Brave's Battlewear (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Briar Armor</button>
+                <button class="butt" onclick="chestArmour()">Briar Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Bull-Goat Armor</button>
+                <button class="butt" onclick="chestArmour()">Carian Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Carian Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Chain Armor</button>
+                <button class="butt" onclick="chestArmour()">Chain-Draped Tabard</button>
+                <button class="butt" onclick="chestArmour()">Champion Pauldron</button>
+                <button class="butt" onclick="chestArmour()">Cleanrot Armor</button>
+                <button class="butt" onclick="chestArmour()">Cleanrot Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Cloth Garb</button>
+                <button class="butt" onclick="chestArmour()">Commoner's Garb</button>
+                <button class="butt" onclick="chestArmour()">Commoner's Garb (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Commoner's Simple Garb</button>
+                <button class="butt" onclick="chestArmour()">Commoner's Simple Garb (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Confessor Armor</button>
+                <button class="butt" onclick="chestArmour()">Confessor Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Consort's Robe</button>
+                <button class="butt" onclick="chestArmour()">Corhyn's Robe</button>
+                <button class="butt" onclick="chestArmour()">Crucible Axe Armor</button>
+                <button class="butt" onclick="chestArmour()">Crucible Axe Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Crucible Tree Armor</button>
+                <button class="butt" onclick="chestArmour()">Crucible Tree Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Cuckoo Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Cuckoo Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Cuckoo Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Deathbed Dress</button>
+                <button class="butt" onclick="chestArmour()">Depraved Perfumer Robe</button>
+                <button class="butt" onclick="chestArmour()">Depraved Perfumer Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Dirty Chainmail</button>
+                <button class="butt" onclick="chestArmour()">Drake Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Drake Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Eccentric's Armor</button>
+                <button class="butt" onclick="chestArmour()">Elden Lord Armor</button>
+                <button class="butt" onclick="chestArmour()">Elden Lord Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Erdtree Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Errant Sorcerer Robe</button>
+                <button class="butt" onclick="chestArmour()">Errant Sorcerer Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Exile Armor</button>
+                <button class="butt" onclick="chestArmour()">Eye Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Fell Omen Cloak</button>
+                <button class="butt" onclick="chestArmour()">Festive Garb</button>
+                <button class="butt" onclick="chestArmour()">Festive Garb (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Fia's Robe</button>
+                <button class="butt" onclick="chestArmour()">Fia's Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Finger Maiden Robe</button>
+                <button class="butt" onclick="chestArmour()">Finger Maiden Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Fingerprint Armor</button>
+                <button class="butt" onclick="chestArmour()">Fingerprint Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Fire Monk Armor</button>
+                <button class="butt" onclick="chestArmour()">Fire Prelate Armor</button>
+                <button class="butt" onclick="chestArmour()">Fire Prelate Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Foot Soldier Tabard</button>
+                <button class="butt" onclick="chestArmour()">Fur Raiment</button>
+                <button class="butt" onclick="chestArmour()">Gelmir Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Gelmir Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Godrick Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Godrick Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Godskin Apostle Robe</button>
+                <button class="butt" onclick="chestArmour()">Godskin Noble Robe</button>
+                <button class="butt" onclick="chestArmour()">Goldmask's Rags</button>
+                <button class="butt" onclick="chestArmour()">Gravekeeper Cloak</button>
+                <button class="butt" onclick="chestArmour()">Gravekeeper Cloak (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Guardian Garb</button>
+                <button class="butt" onclick="chestArmour()">Guardian Garb (Full Bloom)</button>
+                <button class="butt" onclick="chestArmour()">Haligtree Crest Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Haligtree Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Haligtree Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">High Page Clothes</button>
+                <button class="butt" onclick="chestArmour()">High Page Clothes (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Highwayman Cloth Armor</button>
+                <button class="butt" onclick="chestArmour()">Hoslow's Armor</button>
+                <button class="butt" onclick="chestArmour()">Hoslow's Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Ivory-Draped Tabard</button>
+                <button class="butt" onclick="chestArmour()">Juvenile Scholar Robe</button>
+                <button class="butt" onclick="chestArmour()">Kaiden Armor</button>
+                <button class="butt" onclick="chestArmour()">Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Land of Reeds Armor</button>
+                <button class="butt" onclick="chestArmour()">Land of Reeds Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Lazuli Robe</button>
+                <button class="butt" onclick="chestArmour()">Leather Armor</button>
+                <button class="butt" onclick="chestArmour()">Leather-Draped Tabard</button>
+                <button class="butt" onclick="chestArmour()">Leyndell Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Leyndell Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Lionel's Armor</button>
+                <button class="butt" onclick="chestArmour()">Lionel's Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Lord of Blood's Robe</button>
+                <button class="butt" onclick="chestArmour()">Lord of Blood's Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Lusat's Robe</button>
+                <button class="butt" onclick="chestArmour()">Malenia's Armor</button>
+                <button class="butt" onclick="chestArmour()">Malenia's Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Malformed Dragon Armor</button>
+                <button class="butt" onclick="chestArmour()">Maliketh's Armor</button>
+                <button class="butt" onclick="chestArmour()">Maliketh's Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Marais Robe</button>
+                <button class="butt" onclick="chestArmour()">Marionette Soldier Armor</button>
+                <button class="butt" onclick="chestArmour()">Mausoleum Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Mausoleum Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Mausoleum Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Millicent's Robe</button>
+                <button class="butt" onclick="chestArmour()">Millicent's Tunic</button>
+                <button class="butt" onclick="chestArmour()">Mushroom Body</button>
+                <button class="butt" onclick="chestArmour()">Night Maiden Armor</button>
+                <button class="butt" onclick="chestArmour()">Night's Cavalry Armor</button>
+                <button class="butt" onclick="chestArmour()">Night's Cavalry Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Noble's Traveling Garb</button>
+                <button class="butt" onclick="chestArmour()">Nomadic Merchant's Finery</button>
+                <button class="butt" onclick="chestArmour()">Nomadic Merchant's Finery (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Nox Monk Armor</button>
+                <button class="butt" onclick="chestArmour()">Nox Monk Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Nox Swordstress Armor</button>
+                <button class="butt" onclick="chestArmour()">Nox Swordstress Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Official's Attire</button>
+                <button class="butt" onclick="chestArmour()">Old Aristocrat Gown</button>
+                <button class="butt" onclick="chestArmour()">Omen Armor</button>
+                <button class="butt" onclick="chestArmour()">Omenkiller Robe</button>
+                <button class="butt" onclick="chestArmour()">Page Garb</button>
+                <button class="butt" onclick="chestArmour()">Page Garb (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Perfumer Robe</button>
+                <button class="butt" onclick="chestArmour()">Perfumer Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Perfumer's Traveling Garb</button>
+                <button class="butt" onclick="chestArmour()">Perfumer's Traveling Garb (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Preceptor's Long Gown</button>
+                <button class="butt" onclick="chestArmour()">Preceptor's Long Gown (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Prisoner Clothing</button>
+                <button class="butt" onclick="chestArmour()">Prophet Robe</button>
+                <button class="butt" onclick="chestArmour()">Prophet Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Queen's Robe</button>
+                <button class="butt" onclick="chestArmour()">Radahn's Lion Armor</button>
+                <button class="butt" onclick="chestArmour()">Radahn's Lion Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Ragged Armor</button>
+                <button class="butt" onclick="chestArmour()">Ragged Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Raging Wolf Armor</button>
+                <button class="butt" onclick="chestArmour()">Raging Wolf Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Raptor's Black Feathers</button>
+                <button class="butt" onclick="chestArmour()">Raya Lucarian Robe</button>
+                <button class="butt" onclick="chestArmour()">Redmane Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Redmane Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Redmane Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Ronin's Armor</button>
+                <button class="butt" onclick="chestArmour()">Ronin's Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Rotten Gravekeeper Cloak</button>
+                <button class="butt" onclick="chestArmour()">Rotten Gravekeeper Cloak (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Royal Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Royal Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Royal Remains Armor</button>
+                <button class="butt" onclick="chestArmour()">Ruler's Robe</button>
+                <button class="butt" onclick="chestArmour()">Sage Robe</button>
+                <button class="butt" onclick="chestArmour()">Sanguine Noble Robe</button>
+                <button class="butt" onclick="chestArmour()">Scale Armor</button>
+                <button class="butt" onclick="chestArmour()">Scaled Armor</button>
+                <button class="butt" onclick="chestArmour()">Scaled Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Scarlet Tabard</button>
+                <button class="butt" onclick="chestArmour()">Shaman Furs</button>
+                <button class="butt" onclick="chestArmour()">Snow Witch Robe</button>
+                <button class="butt" onclick="chestArmour()">Snow Witch Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Spellblade's Traveling Attire</button>
+                <button class="butt" onclick="chestArmour()">Spellblade's Traveling Attire (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Traveler's Clothes</button>
+                <button class="butt" onclick="chestArmour()">Traveling Maiden Robe</button>
+                <button class="butt" onclick="chestArmour()">Traveling Maiden Robe (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Tree Sentinel Armor</button>
+                <button class="butt" onclick="chestArmour()">Tree Sentinel Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Tree Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Tree-and-Beast Surcoat</button>
+                <button class="butt" onclick="chestArmour()">Twinned Armor</button>
+                <button class="butt" onclick="chestArmour()">Twinned Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Upper-Class Robe</button>
+                <button class="butt" onclick="chestArmour()">Vagabond Knight Armor</button>
+                <button class="butt" onclick="chestArmour()">Vagabond Knight Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Veteran's Armor</button>
+                <button class="butt" onclick="chestArmour()">Veteran's Armor (Altered)</button>
+                <button class="butt" onclick="chestArmour()">Vulgar Militia Armor</button>
+                <button class="butt" onclick="chestArmour()">War Surgeon Gown</button>
+                <button class="butt" onclick="chestArmour()">War Surgeon Gown (Altered)</button>
+                <button class="butt" onclick="chestArmour()">White Reed Armor</button>
+                <button class="butt" onclick="chestArmour()">Zamor Armor</button>
+            </div>
+        </div>
+        <div class="divdrop dropdown">
+            <input id="imginput3" class="imginput" type="image" src="https://www.unizambeze.ac.mz/wp-content/uploads/2016/07/plus-4-xxl.png">
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Gauntlets.." id="myInput" onkeyup="filterFunction()">
+                <button class="butt" onclick="handArmour()">Alberich's Bracers</button>
+                <button class="butt" onclick="handArmour()">All-Knowing Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Astrologer Gloves</button>
+                <button class="butt" onclick="handArmour()">Azur's Manchettes</button>
+                <button class="butt" onclick="handArmour()">Bandit Manchettes</button>
+                <button class="butt" onclick="handArmour()">Banished Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Battlemage Manchettes</button>
+                <button class="butt" onclick="handArmour()">Beast Champion Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Black Knife Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Blackflame Monk Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Blaidd's Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Bloodhound Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Bloodsoaked Manchettes</button>
+                <button class="butt" onclick="handArmour()">Blue Silver Bracelets</button>
+                <button class="butt" onclick="handArmour()">Brave's Bracer</button>
+                <button class="butt" onclick="handArmour()">Briar Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Bull-Goat Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Carian Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Champion Bracers</button>
+                <button class="butt" onclick="handArmour()">Cleanrot Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Confessor Gloves</button>
+                <button class="butt" onclick="handArmour()">Crucible Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Cuckoo Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Depraved Perfumer Gloves</button>
+                <button class="butt" onclick="handArmour()">Drake Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Eccentric's Manchettes</button>
+                <button class="butt" onclick="handArmour()">Elden Lord Bracers</button>
+                <button class="butt" onclick="handArmour()">Errant Sorcerer Manchettes</button>
+                <button class="butt" onclick="handArmour()">Exile Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Fingerprint Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Fire Monk Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Fire Prelate Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Foot Soldier Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Gelmir Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Godrick Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Godrick Soldier Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Godskin Apostle Bracelets</button>
+                <button class="butt" onclick="handArmour()">Godskin Noble Bracelets</button>
+                <button class="butt" onclick="handArmour()">Gold Bracelets</button>
+                <button class="butt" onclick="handArmour()">Golden Prosthetic</button>
+                <button class="butt" onclick="handArmour()">Guardian Bracers</button>
+                <button class="butt" onclick="handArmour()">Haligtree Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Haligtree Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Highwayman Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Hoslow's Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Iron Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Kaiden Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Land of Reeds Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Leather Gloves</button>
+                <button class="butt" onclick="handArmour()">Leyndell Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Leyndell Soldier Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Lionel's Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Lusat's Manchettes</button>
+                <button class="butt" onclick="handArmour()">Malenia's Gauntlet</button>
+                <button class="butt" onclick="handArmour()">Malformed Dragon Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Maliketh's Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Mausoleum Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Mausoleum Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Millicent's Gloves</button>
+                <button class="butt" onclick="handArmour()">Mushroom Arms</button>
+                <button class="butt" onclick="handArmour()">Night's Cavalry Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Noble's Gloves</button>
+                <button class="butt" onclick="handArmour()">Nox Bracelets</button>
+                <button class="butt" onclick="handArmour()">Omen Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Omenkiller Long Gloves</button>
+                <button class="butt" onclick="handArmour()">Perfumer Gloves</button>
+                <button class="butt" onclick="handArmour()">Preceptor's Gloves</button>
+                <button class="butt" onclick="handArmour()">Queen's Bracelets</button>
+                <button class="butt" onclick="handArmour()">Radahn Soldier Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Radahn's Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Ragged Gloves</button>
+                <button class="butt" onclick="handArmour()">Raging Wolf Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Raya Lucarian Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Redmane Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Ronin's Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Royal Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Royal Remains Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Scaled Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Sorcerer Manchettes</button>
+                <button class="butt" onclick="handArmour()">Spellblade's Gloves</button>
+                <button class="butt" onclick="handArmour()">Traveler's Gloves</button>
+                <button class="butt" onclick="handArmour()">Traveler's Manchettes</button>
+                <button class="butt" onclick="handArmour()">Traveling Maiden Gloves</button>
+                <button class="butt" onclick="handArmour()">Tree Sentinel Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Twinned Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Vagabond Knight Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Veteran's Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Vulgar Militia Gauntlets</button>
+                <button class="butt" onclick="handArmour()">War Surgeon Gloves</button>
+                <button class="butt" onclick="handArmour()">Warrior Gauntlets</button>
+                <button class="butt" onclick="handArmour()">White Reed Gauntlets</button>
+                <button class="butt" onclick="handArmour()">Zamor Bracelets</button>
+            </div>
+        </div>
+        <div class="divdrop dropdown">
+            <input id="imginput4" class="imginput" type="image" src="https://www.unizambeze.ac.mz/wp-content/uploads/2016/07/plus-4-xxl.png">
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder=":Leg Armour.." id="myInput" onkeyup="filterFunction()">
+                <button class="butt" onclick="legArmour()">All-Knowing Greaves</button>
+                <button class="butt" onclick="legArmour()">Alberich's Trousers</button>
+                <button class="butt" onclick="legArmour()">Astrologer Trousers</button>
+                <button class="butt" onclick="legArmour()">Bandit Boots</button>
+                <button class="butt" onclick="legArmour()">Banished Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Beast Champion Greaves</button>
+                <button class="butt" onclick="legArmour()">Black Knife Greaves</button>
+                <button class="butt" onclick="legArmour()">Blackflame Monk Greaves</button>
+                <button class="butt" onclick="legArmour()">Bloodhound Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Briar Greaves</button>
+                <button class="butt" onclick="legArmour()">Bull-Goat Greaves</button>
+                <button class="butt" onclick="legArmour()">Champion Gaiters</button>
+                <button class="butt" onclick="legArmour()">Carian Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Chain Leggings</button>
+                <button class="butt" onclick="legArmour()">Cleanrot Greaves</button>
+                <button class="butt" onclick="legArmour()">Cloth Trousers</button>
+                <button class="butt" onclick="legArmour()">Commoner's Shoes</button>
+                <button class="butt" onclick="legArmour()">Confessor Boots</button>
+                <button class="butt" onclick="legArmour()">Consort's Trousers</button>
+                <button class="butt" onclick="legArmour()">Crucible Greaves</button>
+                <button class="butt" onclick="legArmour()">Eccentric's Breeches</button>
+                <button class="butt" onclick="legArmour()">Elden Lord Greaves</button>
+                <button class="butt" onclick="legArmour()">Errant Sorcerer Boots</button>
+                <button class="butt" onclick="legArmour()">Exile Greaves</button>
+                <button class="butt" onclick="legArmour()">Finger Maiden Shoes</button>
+                <button class="butt" onclick="legArmour()">Fire Monk Greaves</button>
+                <button class="butt" onclick="legArmour()">Foot Soldier Greaves</button>
+                <button class="butt" onclick="legArmour()">Fur Leggings</button>
+                <button class="butt" onclick="legArmour()">Gelmir Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Godrick Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Godskin Apostle Trousers</button>
+                <button class="butt" onclick="legArmour()">Guardian Greaves</button>
+                <button class="butt" onclick="legArmour()">Haligtree Greaves</button>
+                <button class="butt" onclick="legArmour()">Hoslow's Greaves</button>
+                <button class="butt" onclick="legArmour()">Kaiden Trousers</button>
+                <button class="butt" onclick="legArmour()">Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Land of Reeds Greaves</button>
+                <button class="butt" onclick="legArmour()">Leather Trousers</button>
+                <button class="butt" onclick="legArmour()">Lionel's Greaves</button>
+                <button class="butt" onclick="legArmour()">Malformed Dragon Greaves</button>
+                <button class="butt" onclick="legArmour()">Maliketh's Greaves</button>
+                <button class="butt" onclick="legArmour()">Millicent's Boots</button>
+                <button class="butt" onclick="legArmour()">Mushroom Legs</button>
+                <button class="butt" onclick="legArmour()">Noble's Trousers</button>
+                <button class="butt" onclick="legArmour()">Omenkiller Boots</button>
+                <button class="butt" onclick="legArmour()">Queen's Leggings</button>
+                <button class="butt" onclick="legArmour()">Page Trousers</button>
+                <button class="butt" onclick="legArmour()">Preceptor's Trousers</button>
+                <button class="butt" onclick="legArmour()">Prisoner Trousers</button>
+                <button class="butt" onclick="legArmour()">Prophet Trousers</button>
+                <button class="butt" onclick="legArmour()">Radahn's Greaves</button>
+                <button class="butt" onclick="legArmour()">Radahn Soldier Greaves</button>
+                <button class="butt" onclick="legArmour()">Raging Wolf Greaves</button>
+                <button class="butt" onclick="legArmour()">Raya Lucarian Greaves</button>
+                <button class="butt" onclick="legArmour()">Rotten Duelist Greaves</button>
+                <button class="butt" onclick="legArmour()">Sage Trousers</button>
+                <button class="butt" onclick="legArmour()">Sanguine Noble Waistcloth</button>
+                <button class="butt" onclick="legArmour()">Scaled Greaves</button>
+                <button class="butt" onclick="legArmour()">Snow Witch Skirt</button>
+                <button class="butt" onclick="legArmour()">Sorcerer Leggings</button>
+                <button class="butt" onclick="legArmour()">Traveler's Slops</button>
+                <button class="butt" onclick="legArmour()">Traveling Maiden Boots</button>
+                <button class="butt" onclick="legArmour()">Twinned Greaves</button>
+                <button class="butt" onclick="legArmour()">Warrior Greaves</button>
+                <button class="butt" onclick="legArmour()">Vagabond Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Veteran's Greaves</button>
+                <button class="butt" onclick="legArmour()">White Reed Greaves</button>
+                <button class="butt" onclick="legArmour()">Zamor Legwraps</button>
+                <button class="butt" onclick="legArmour()">Drake Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Perfumer Sarong</button>
+                <button class="butt" onclick="legArmour()">Spellblade's Trousers</button>
+                <button class="butt" onclick="legArmour()">Ronin's Greaves</button>
+                <button class="butt" onclick="legArmour()">Blaidd's Greaves</button>
+                <button class="butt" onclick="legArmour()">Night's Cavalry Greaves</button>
+                <button class="butt" onclick="legArmour()">Blue Silver Mail Skirt</button>
+                <button class="butt" onclick="legArmour()">Nomadic Merchant's Trousers</button>
+                <button class="butt" onclick="legArmour()">Tree Sentinel Greaves</button>
+                <button class="butt" onclick="legArmour()">Royal Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Nox Greaves</button>
+                <button class="butt" onclick="legArmour()">Shaman Leggings</button>
+                <button class="butt" onclick="legArmour()">Duelist Greaves</button>
+                <button class="butt" onclick="legArmour()">Fire Prelate Greaves</button>
+                <button class="butt" onclick="legArmour()">Aristocrat Boots</button>
+                <button class="butt" onclick="legArmour()">Old Aristocrat Shoes</button>
+                <button class="butt" onclick="legArmour()">Vulgar Militia Greaves</button>
+                <button class="butt" onclick="legArmour()">Godskin Noble Trousers</button>
+                <button class="butt" onclick="legArmour()">Depraved Perfumer Trousers</button>
+                <button class="butt" onclick="legArmour()">Old Sorcerer's Legwraps</button>
+                <button class="butt" onclick="legArmour()">Ragged Loincloth</button>
+                <button class="butt" onclick="legArmour()">War Surgeon Trousers</button>
+                <button class="butt" onclick="legArmour()">Royal Remains Greaves</button>
+                <button class="butt" onclick="legArmour()">Brave's Legwraps</button>
+                <button class="butt" onclick="legArmour()">Malenia's Greaves</button>
+                <button class="butt" onclick="legArmour()">Fingerprint Greaves</button>
+                <button class="butt" onclick="legArmour()">Omen Greaves</button>
+                <button class="butt" onclick="legArmour()">Battlemage Legwraps</button>
+                <button class="butt" onclick="legArmour()">Traveler's Boots</button>
+                <button class="butt" onclick="legArmour()">Gold Waistwrap</button>
+                <button class="butt" onclick="legArmour()">Leather Boots</button>
+                <button class="butt" onclick="legArmour()">Godrick Soldier Greaves</button>
+                <button class="butt" onclick="legArmour()">Leyndell Soldier Greaves</button>
+                <button class="butt" onclick="legArmour()">Mausoleum Greaves</button>
+                <button class="butt" onclick="legArmour()">Cuckoo Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Leyndell Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Redmane Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Mausoleum Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Haligtree Knight Greaves</button>
+                <button class="butt" onclick="legArmour()">Deathbed Smalls</button>
+            </div>
+        </div>
+    </div>
+
+    <img id="img" src="">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

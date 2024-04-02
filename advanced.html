@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.redd.it/0gp7pfwvwrk81.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getEldenRingData('Vagabond')" oninput="softCapColours()">
+    <ul>
+        <span class="left"><a href="index.html">Elden Ring Build Calculator</a></span>
+        <li class="right"><a href="armour.html">Armour Comparison</a></li>
+        <li class="right"><a href="map.html">Elden Ring Map</a></li>
+        <li class="right"><a href="advanced.html">Advanced Calculator</a></li>
+        <li class="right"><a href="basic.html">Basic Calculator</a></li>
+    </ul>
+    <div class="row">
+    
+        <div class="dropdown drop col-md-10">
+            <button id="btn" class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <button onclick="getEldenRingData('Vagabond')">Vagabond</button>
+                <button onclick="getEldenRingData('Warrior')">Warrior</button>
+                <button onclick="getEldenRingData('Hero')">Hero</button>
+                <button onclick="getEldenRingData('Bandit')">Bandit</button>
+                <button onclick="getEldenRingData('Astrologer')">Astrologer</button>
+                <button onclick="getEldenRingData('Prophet')">Prophet</button>
+                <button onclick="getEldenRingData('Samurai')">Samurai</button>
+                <button onclick="getEldenRingData('Prisoner')">Prisoner</button>
+                <button onclick="getEldenRingData('Confessor')">Confessor</button>
+                <button onclick="getEldenRingData('Wretch')">Wretch</button>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <p>Level: </p>
+            <p>Vigor:</p>
+            <p>Mind:</p>
+            <p>Endurance:</p>
+            <p>Strength:</p>
+            <p>Dexterity:</p>
+            <p>Intelligence:</p>
+            <p>Faith:</p>
+            <p>Arcane:</p>
+        </div>
+        <div class="col-md-8">
+            <input id="level">
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="vigor input" id="amount" type="number" max="99" oninput="slider1.value=amount.value">
+                    <input class="slider" id="slider1" type="range" max="99" oninput="amount.value=slider1.value">
+                </span>
+            </form>
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="mind input" id="amount" type="number" max="99" oninput="slider2.value=amount.value">
+                    <input class="slider" id="slider2" type="range" max="99" oninput="amount.value=slider2.value">
+                </span>
+            </form>
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="endurance input" id="amount" type="number" max="99" oninput="slider3.value=amount.value">
+                    <input class="slider" id="slider3" type="range" max="99" oninput="amount.value=slider3.value">
+                </span>
+            </form>
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="strength input" id="amount" type="number" max="99" oninput="slider4.value=amount.value">
+                    <input class="slider" id="slider4" type="range" max="99" oninput="amount.value=slider4.value">
+                </span>
+            </form>
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="dexterity input" id="amount" type="number" max="99" oninput="slider5.value=amount.value">
+                    <input class="slider" id="slider5" type="range" max="99" oninput="amount.value=slider5.value">
+                </span>
+            </form>
+
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="intelligence input" id="amount" type="number" max="99" oninput="slider6.value=amount.value">
+                    <input class="slider" id="slider6" type="range" max="99" oninput="amount.value=slider6.value">
+                </span>
+            </form>
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="faith input" id="amount" type="number" max="99" oninput="slider7.value=amount.value">
+                    <input class="slider" id="slider7" type="range" max="99" oninput="amount.value=slider7.value">
+                </span>
+            </form>
+
+            <form>
+                <span oninput="submitForm(event)">
+                    <input class="arcane input" id="amount" type="number" max="99" oninput="slider8.value=amount.value">
+                    <input class="slider" id="slider8" type="range" max="99" oninput="amount.value=slider8.value">
+                </span>
+            </form>
+        </div>
+
+        <div class="stats col-md-2">
+            <p>HP:
+                <span class="span" id="hp"></span>
+            </p>
+            <p>FP:
+                <span class="span" id="fp"></span>
+            </p>
+            <p>Stamina:
+                <span class="span" id="stamina"></span>
+            </p>
+            <p>Max Equip Load:
+                <span class="span" id="equip"></span>
+            </p>
+            <div>
+                <p class="equipload">Light Load: <span class="span" id="equiploadpercent1"></span></p>
+                <p class="equipload">Medium Load: <span class="span" id="equiploadpercent2"></span></p>
+            </div>
+            <p>Discovery:
+                <span class="span" id="discover"></span>
+            </p>
+            <p>Total Runes:
+                <span class="span" id="total_runes"></span>
+            </p>
+            <p>Runes To Next Level:
+                <span class="span" id="runetonextlevel"></span>
+            </p>
+        </div>
+
+        <div class="calcrune col-md-12">
+            <span class="runecalc">Current Level: <input id="levelcurrent" type="text" min="1" max="712"></span>
+            <span class="runecalc">Wanted Levels: <input id="levelwant" type="text" min="1" max="712"></span>
+            <button class="runecalc" onclick="runeCalc()">Calculate Runes</button>
+            <span>Runes Needed: <span class="span" id="runes"></span></span>
+        </div>
+
+        <div class="calcrune col-md-12">
+            <span class="runecalc">Current Level: <input id="levelcurrent1" type="text" min="1" max="712"></span>
+            <span class="runecalc">Current Runes: <input id="runecurrent1" type="text" min="1" max="1692566842"></span>
+            <button class="runecalc" onclick="levelCalc()">Calculate Levels</button>
+            <span>Level Upgrades: <span class="span" id="runes1"></span></span>
+        </div>
+
+        <div class="runefarmmethod col-md-3">
+            <div id="dropdown1" class="dropdown">
+                <button id="button" class="dropbtn">Rune Farm Method
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="methods">
+                    <button id="mbm" class="buttons" onclick="mbRune()">Mohgwyn Bird Method</button>
+                    <button id="mam" class="buttons" onclick="maRune()">Mohgwyn Albinauric Method</button>
+                    <button id="cvmm" class="buttons" onclick="cvmRune()">Caelid Vulgar Militiamen Method</button>
+                    <button id="lrbm" class="buttons" onclick="lrbRune()">Lenne's Rise Boulder Method</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="runefarmmethod col-md-3">
+            <div id="dropdown1" class="dropdown">
+                <button id="button" class="dropbtn">Current Journey
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="methods">
+                    <button class="buttons" onclick="ngRunes()">NG+</button>
+                    <button class="buttons" onclick="ng1Runes()">NG+1</button>
+                    <button class="buttons" onclick="ng2Runes()">NG+2</button>
+                    <button class="buttons" onclick="ng3Runes()">NG+3</button>
+                    <button class="buttons" onclick="ng4Runes()">NG+4</button>
+                    <button class="buttons" onclick="ng5Runes()">NG+5</button>
+                    <button class="buttons" onclick="ng6Runes()">NG+6</button>
+                    <button class="buttons" onclick="ng7Runes()">NG+7</button>
+                </div>
+            </div>
+        </div>
+    
+        <p class="checkboxp col-md-2">Golden Scarab Talisman<input class="checkbox" id="scarabcheck" type="checkbox" onclick="scarabIncrease(); this.onclick=null;"></p>
+        <p class="checkboxp col-md-2">Gold-Pickled Fowl Foot<input class="checkbox" id="fowlfootcheck" type="checkbox" onclick="fowlfootIncrease(); this.onclick=null;"></p>
+        <p class="text col-md-2">Rune Amount Every 1 Minute ~ <span class="span" id="runefarm"></span></p>
+    
+        <span class="col-md-3" id="span">Time Needed To Reach Wanted Level: </span>
+        <span class="span col-md-2" id="timeforrune"></span>
+        <button class="runecalc col-md-5" id="timeforrunebutton" onclick="timeForRunes()">Calculate Time</button>
+        
+
+        <div class="dropdiv drop dropdown">
+            <button id="dropdiv" onclick="weaponList()" class="dropbtn">Weapons</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

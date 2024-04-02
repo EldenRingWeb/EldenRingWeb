@@ -1,0 +1,327 @@
+body {
+    background-image: url('https://i.postimg.cc/yBqzG71C/nklxvnaorl671-2.jpg?dl=1');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.row {
+    background: rgb(0, 0, 0, 0.5);
+    color: #ffaa49;
+    border-radius: 0px 0px 10px 10px;
+    text-align: left;
+    margin: auto;
+    width: 80%;
+    padding-top: 5%;
+}
+
+.dropbtn {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    width: 73%;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    width: 73%;
+    margin-left: 22.8%;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 71%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropown-content a:hover {
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.calcrune {
+    margin-left: 10%;
+}
+
+.runecalc {
+    margin-right: 7%;
+    margin-top: 2%;
+}
+
+input {
+    margin-bottom: 10.5px;
+    width: 5%;
+    border-radius: 25px;
+    border-color: #ffaa49;
+}
+
+.slider {
+    -webkit-appearance: none;
+    margin-left: 4%;
+    margin-top: 10px;
+    width: 80%;
+    height: 7px;
+    border-radius: 25px;
+    background: rgb(193, 151, 90, 0.3);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    opacity: 1;
+    background: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#level {
+    background-color: white;
+    border-radius: 25px;
+    border-color: #ffaa49;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10.5px;
+    width: 5%;
+    height: 7.5%;
+    color: black;
+    padding-left: 5px;
+}
+
+.runes {
+    color: white;
+}
+
+.runes1 {
+    color: white;
+}
+
+.equipload {
+    font-size: 13px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.span {
+    color: white;
+}
+
+.stats {
+    margin-top: 0%;
+    text-align: center;
+    margin-left: -50px;
+    margin-bottom: 0%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.show {
+    display:block;
+}
+
+.dropdiv {
+    height: 300px;
+}
+
+#myDropdown {
+    height: 200px;
+    overflow-y: auto;
+}
+
+#myInput {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0);
+    border-style: none;
+    color: #ffaa49;
+}
+
+button.runecalc {
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 15%;
+    padding: 0.5%;
+}
+
+.consolelog {
+    border-style: solid;
+    margin-bottom: 10%;
+}
+
+.bottom {
+    margin-bottom: 3%;
+}
+
+#dropdown1 {
+    width: 100%;
+}
+
+#methods {
+    width: 73%;
+}
+
+.runefarmmethod  {
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.checkboxp {
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.text {
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.checkbox {
+    width: 50px;
+}
+
+#span {
+    margin-left: 7%;
+}
+
+#timeforrunebutton {
+    margin-left: 3.8%;
+    margin-top: 0%;
+    margin-bottom: 10%;
+}
+
+#timeforrune {
+    margin-left: 0px;
+    text-align: left;
+}
+
+iframe {
+    height: 650px;
+    margin-bottom: 20%;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0%;
+    padding: 0px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 1);
+    width: 100%;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: #ffaa49;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.right {
+    float: right;
+    padding: 14px 16px;
+}
+
+.left {
+    font-size: 30px;
+}
+
+span a {
+    text-decoration: none;
+    color: #ffaa49;
+    text-align: center;
+    margin-left: 5%;
+}
+
+span a:hover {
+    color: #ffaa49;
+}
+
+.p {
+    color: #fff;
+}
+
+.pagetransfer {
+    background-color: black;
+    text-align: center;
+    margin-left: 32.5%;
+    border-radius: 15px;
+    font-size: 35px;
+    padding: 1%;
+    width: 35%;
+    box-shadow: 0px 5px;
+    transition: all 0.5s;
+    margin-bottom: 5%;
+}
+
+.pagetransfer:active {
+    box-shadow: 0 2px #ff9f31;
+    transform: translateY(4px);
+}
+
+.pagetransfer span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.pagetransfer span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.pagetransfer:hover span {
+    padding-right: 25px;
+}
+  
+.pagetransfer:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.divdrop:hover .dropdown-content {
+    display: block;
+}
