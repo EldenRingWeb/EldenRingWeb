@@ -10,17 +10,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2eccc60d-e89e-4286-9b96-b7ca30e49370/desrap6-73766f9c-4cec-4b22-9864-48555d3acf94.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJlY2NjNjBkLWU4OWUtNDI4Ni05Yjk2LWI3Y2EzMGU0OTM3MFwvZGVzcmFwNi03Mzc2NmY5Yy00Y2VjLTRiMjItOTg2NC00ODU1NWQzYWNmOTQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.420H5JOa876JCgcUPPDRwUbbgwhNwZOv3uFrNE1CUrg">
-    <link rel="stylesheet" href="style.css">
     <title>Elden Ring Calculator</title>
 </head>
 
-<body onload="getEldenRingData('Vagabond')" oninput="softCapColours()">
+<body onload="getEldenRingData('Vagabond')" oninput="softCapColours();">
     <ul>
         <span class="left"><a href="index.html">Elden Ring Web</a></span>
         <li class="right"><a href="armour.html">Armour Comparison</a></li>
         <li class="right"><a href="map.html">Elden Ring Map</a></li>
-        <li class="right"><a href="advanced.html">Advanced Calculator</a></li>
-        <li class="right"><a href="basic.html">Basic Calculator</a></li>
+        <li class="right"><a href="advanced.html">Calculator</a></li>
+        <li class="right"><a href="weapons.html">Weapons</a></li>
     </ul>
     <div class="row">
         <div class="col-1">
@@ -75,20 +74,22 @@
             <div class="overlay"></div>
             <button id="Wretch" class="button" name="Wretch" onclick="getEldenRingData('Wretch'); clicked(this.id)">Choose</button>
         </div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
 
-        <div class="col-2">
-            <p>Level: </p>
-            <p>Vigor:</p>
-            <p>Mind:</p>
-            <p>Endurance:</p>
-            <p>Strength:</p>
-            <p>Dexterity:</p>
-            <p>Intelligence:</p>
-            <p>Faith:</p>
-            <p>Arcane:</p>
+        <div class="col-1">
+            <p class="pslides">Level: </p>
+            <p class="pslides">Vigor:</p>
+            <p class="pslides">Mind:</p>
+            <p class="pslides">Endurance:</p>
+            <p class="pslides">Strength:</p>
+            <p class="pslides">Dexterity:</p>
+            <p class="pslides">Intelligence:</p>
+            <p class="pslides">Faith:</p>
+            <p class="pslides">Arcane:</p>
         </div>
         <div class="col-8">
-            <input id="level">
+            <input id="level" type="number">
             <form>
                 <span oninput="submitForm(event)">
                     <input class="vigor input" id="amount" type="number" max="99" oninput="slider1.value=amount.value">
@@ -141,7 +142,7 @@
             </form>
         </div>
 
-        <div class="stats col-2">
+        <div class="stats col-1">
             <p>HP:
                 <span class="span" id="hp"></span>
             </p>
@@ -182,8 +183,8 @@
             <button class="runecalc" onclick="levelCalc()">Calculate Levels</button>
             <span>Level Upgrades: <span class="span" id="runes1"></span></span>
         </div>
-
-        <div class="runefarmmethod col-3">
+        <div class="col-1"></div>
+        <div class="runefarmmethod col-2">
             <div id="dropdown1" class="dropdown">
                 <button id="button" class="dropbtn">Rune Farm Method
                   <i class="fa fa-caret-down"></i>
@@ -197,7 +198,7 @@
             </div>
         </div>
 
-        <div class="runefarmmethod col-3">
+        <div class="runefarmmethod col-2">
             <div id="dropdown1" class="dropdown">
                 <button id="button" class="dropbtn">Current Journey
                   <i class="fa fa-caret-down"></i>
@@ -217,19 +218,12 @@
     
         <p class="checkboxp col-2">Golden Scarab Talisman<input class="checkbox" id="scarabcheck" type="checkbox" onclick="scarabIncrease(); this.onclick=null;"></p>
         <p class="checkboxp col-2">Gold-Pickled Fowl Foot<input class="checkbox" id="fowlfootcheck" type="checkbox" onclick="fowlfootIncrease(); this.onclick=null;"></p>
-        <p class="text col-2">Rune Amount Every 1 Minute ~ <span class="span" id="runefarm"></span></p>
+        <p class="text col-2">Runes Per Minute ~ <span class="span" id="runefarm"></span></p>
     
         <span class="col-3" id="span">Time Needed To Reach Wanted Level: </span>
         <span class="span col-2" id="timeforrune"></span>
         <button class="runecalc col-5" id="timeforrunebutton" onclick="timeForRunes()">Calculate Time</button>
         
-
-        <div class="dropdiv drop dropdown">
-            <button id="dropdiv" onclick="weaponList()" class="dropbtn">Weapons</button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-            </div>
-        </div>
     </div>
 
     <script src="js/bootstrap.min.js"></script>
